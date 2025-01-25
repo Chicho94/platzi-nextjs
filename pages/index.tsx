@@ -19,10 +19,10 @@ export const getStaticProps: GetStaticProps = async () => {
 
 const HomePage = ({ productList }: { productList: TProduct[] }) => {
   return (
-    <Layout>
+    (<Layout>
       <KawaiiHeader />
       <section>
-        <Link href="/yes-or-no">
+        <Link href="/yes-or-no" legacyBehavior>
           <a>¿Deberia comer un avo hoy?</a>
         </Link>
       </section>
@@ -33,8 +33,8 @@ const HomePage = ({ productList }: { productList: TProduct[] }) => {
           margin-bottom: 2rem;
         }
       `}</style>
-    </Layout>
-  )
+    </Layout>)
+  );
 }
 
 export default HomePage
